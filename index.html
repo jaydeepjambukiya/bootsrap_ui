@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .custom-image {
+            border-radius: 15px;
+            /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            /* Black shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-image:hover {
+            transform: scale(1.03);
+            /* Slight zoom effect on hover */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+            /* Stronger shadow on hover */
+        }
+
+        .btn {
+            border-radius: 10px;
+            /* smoother corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            /* subtle hover effect */
+        }
+
+        .service-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            /* lifts card */
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            /* bigger shadow */
+        }
+
+        .custom-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .custom-image {
+            transform: scale(1.05);
+            /* slight zoom effect */
+        }
+
+        .btn-primary {
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My WebSide </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servcies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Conatct US</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- home page -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active position-relative" data-bs-interval="3000">
+                <img src="images/christopher-gower-m_HRfLhgABo-unsplash.jpg" style="height:100vh; object-fit:cover;"
+                    class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="carousel-caption d-none d-md-block text-light">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item position-relative" data-bs-interval="3000">
+                <img src="images/jantine-doornbos-xt9tb6oa42o-unsplash.jpg" style="height:100vh; object-fit:cover;"
+                    class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="carousel-caption d-none d-md-block text-light">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item position-relative" data-bs-interval="3000">
+                <img src="images/christina-wocintechchat-com-FVgECvTjlBQ-unsplash.jpg"
+                    style="height:100vh; object-fit:cover;" class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+                <div class="carousel-caption d-none d-md-block text-light">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- About Us -->
+    <div class="container text-center">
+        <div class="row mt-5 mb-5 bg-light p-5 rounded-3 shadow-lg ">
+            <div class="col-md-6 text-center">
+                <img src="images/banner 2.jpg" class="img-fluid custom-image" alt="...">
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <h2>About Us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas odio hic consequatur est velit
+                    magnam laboriosam in distinctio cum quidem maiores, officia excepturi minus, accusamus quas culpa
+                    provident doloremque dolor.</p>
+                <div class="text-center mt-4">
+                    <button type="button" class="btn btn-primary btn-lg me-3 shadow">Read More..</button>
+                    <button type="button" class="btn btn-secondary btn-lg shadow">Large button</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Servcies Section -->
+    <div class="container text-center my-5">
+        <h2 class="mb-5 fw-bold text-primary">Our Services</h2>
+
+        <div class="row g-4 mb-5">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg service-card">
+                    <img src="images/card 1.jpg" class="card-img-top custom-image" alt="Web Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Build responsive, modern websites using the latest technologies like HTML,
+                            CSS, JavaScript, and frameworks.</p>
+                        <a href="#" class="btn btn-primary shadow">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg service-card">
+                    <img src="images/card 2.jpg" class="card-img-top custom-image" alt="UI/UX Design">
+                    <div class="card-body">
+                        <h5 class="card-title">UI/UX Design</h5>
+                        <p class="card-text">Craft intuitive and modern designs that provide a smooth and delightful
+                            user experience.</p>
+                        <a href="#" class="btn btn-primary shadow">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg service-card">
+                    <img src="images/card 3.jpg" class="card-img-top custom-image" alt="SEO">
+                    <div class="card-body">
+                        <h5 class="card-title">SEO</h5>
+                        <p class="card-text">Optimize websites for search engines to improve visibility, ranking, and
+                            audience reach.</p>
+                        <a href="#" class="btn btn-primary shadow">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contect us section -->
+    <div class="container text-center my-5">
+        <h2 class="mb-5 fw-bold text-primary">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3 text-start">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary shadow">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p class="mb-0">&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+     
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
